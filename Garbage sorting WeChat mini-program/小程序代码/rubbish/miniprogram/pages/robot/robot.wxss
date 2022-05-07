@@ -1,0 +1,94 @@
+page {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+.title{
+  padding: 10rpx 0 30rpx 15rpx;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+.list .item{
+  display: flex;
+  flex-direction: column;
+  padding: 15rpx 15rpx 15rpx 15rpx;
+}
+.list .item .avatar{
+  width: 60rpx;
+  height: 60rpx;
+  flex-shrink: 0;
+}
+.list .item .left{
+  display: flex;
+  justify-content: flex-start;
+}
+.list .item .left .content{
+  background-color: #ebf6fe;
+  z-index: 2;
+  padding: 15rpx;
+  border-radius: 10rpx;
+  color: #333333;
+  font-size: 28rpx;
+}
+.list .item .left .triangle{
+  background-color: #ebf6fe;
+  height: 40rpx;
+  width: 40rpx;
+  transform: rotate(45deg);
+  z-index: 1;
+  margin: 10rpx -25rpx 0 25rpx;
+  border-radius: 10rpx;
+  flex-shrink: 0;
+}
+.list .item .right{
+  display: flex;
+  justify-content: flex-end;
+}
+.list .item .right .content{
+  background-color: #eeeeee;
+  z-index: 2;
+  padding: 15rpx;
+  border-radius: 10rpx;
+  color: #333333;
+  font-size: 28rpx;
+}
+.list .item .right .triangle{
+  background-color: #eeeeee;
+  height: 40rpx;
+  width: 40rpx;
+  transform: rotate(45deg);
+  z-index: 1;
+  margin: 10rpx 25rpx 0 -25rpx;
+  border-radius: 10rpx;
+  flex-shrink: 0;
+}
+
+.form{
+  display: flex;
+  align-items: center;
+  background-color: #eae7e9;
+  width: 100%;
+  padding: 15rpx 0 15rpx 0;
+}
+.form .inp{
+  flex: 1;
+  padding: 10rpx 15rpx 10rpx 15rpx;
+  background-color: #ffffff;
+  opacity: 0.8;
+  margin-left: 15rpx;
+}

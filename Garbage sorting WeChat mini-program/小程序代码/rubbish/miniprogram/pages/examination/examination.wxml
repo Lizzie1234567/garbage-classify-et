@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="answer-box" wx:if="{{isAnswering}}">
+    <text class="name">{{currentIndex+1}}/{{questionIndexs.length}} "{{currentQuestion.name}}"属于什么垃圾?</text>
+    <radio-group class="radio-group">
+      <radio class="radio" color="#1296db" checked="{{resetCheckedVal}}" bindtap="radioChange" data-value="a">
+        <text>{{currentQuestion.a}}</text>
+      </radio>
+      <radio class="radio" color="#1296db" checked="{{resetCheckedVal}}" bindtap="radioChange" data-value="b">
+        <text>{{currentQuestion.b}}</text>
+      </radio>
+      <radio class="radio" color="#1296db" checked="{{resetCheckedVal}}" bindtap="radioChange" data-value="c">
+        <text>{{currentQuestion.c}}</text>
+      </radio>
+      <radio class="radio" color="#1296db" checked="{{resetCheckedVal}}" bindtap="radioChange" data-value="d">
+        <text>{{currentQuestion.d}}</text>
+      </radio>
+    </radio-group>
+  </view>
+  <view class="result-box" wx:if="{{!isAnswering}}">
+    <view class="main">
+      <view class="title">垃圾分类随堂小测试</view>
+      <view class="scope">{{scope}}分</view>
+      <view class="header">
+        <view class="name">题目</view>
+        <view class="myanswer">我的答案</view>
+        <view class="answer">正确答案</view>
+      </view>
+      <view class="row" wx:for="{{questions}}" wx:for-item="item">
+        <view class="name">{{item.name}}</view>
+        <view class="myanswer {{item.myanswer!=item.answer?'wrong':''}}">{{item[item.myanswer]}}</view>
+        <view class="answer">{{item[item.answer]}}</view>
+      </view>
+    </view>
+    <button bindtap='bindAgain' size="mini" class='btns'>
+      <image src='../../images/restart-line.png' mode="widthFix"></image>
+      再考一次 </button>
+  </view>
+</view>

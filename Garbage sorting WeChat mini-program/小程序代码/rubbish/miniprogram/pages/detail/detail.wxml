@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="{{true}}" class="scroll-view">
+    <view class="root">
+       <text class="productName">{{product.name}}</text>
+       <text class="categoryName">{{category.name}}</text>
+       <image  class="categoryImg" mode="scaleToFill" src="{{category.img}}"></image>
+       <text class="categoryDes">{{category.des}}</text>
+       <text class="guideTitle">投放指导</text>
+       <text class="guide">{{category.guide}}</text>
+    </view>
+  </scroll-view>
+</view>

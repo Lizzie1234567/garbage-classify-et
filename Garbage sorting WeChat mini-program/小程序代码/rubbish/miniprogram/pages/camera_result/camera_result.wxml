@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="{{true}}" class="scroll-view">
+    <view class="root">
+      <view class="header_box"> 
+        <text class="msg">拍照识别信息如下:</text>
+        <button type="primary" size="mini" bindtap="toCameraPage">重新拍照</button>
+      </view>
+      <view class="list">
+        <view class='item' wx:for="{{list}}" wx:for-item="item" bindtap="toDetailPage" data-id='{{item._id}}'>
+          <view class='name'>{{item.keyword}}</view>
+          <view class='category'>{{item.categoryName}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

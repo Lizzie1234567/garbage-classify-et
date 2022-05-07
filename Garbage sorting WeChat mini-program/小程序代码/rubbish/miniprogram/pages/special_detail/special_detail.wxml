@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="{{true}}" class="scroll-view">
+    <view class="root">
+      <view class="item" wx:for="{{obj.next}}" wx:key="{{item}}">
+        <text class="name">{{item.key}}</text>
+        <text class="category">{{item.val}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

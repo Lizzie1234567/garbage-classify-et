@@ -1,0 +1,10 @@
+<view class="container">
+  <scroll-view scroll-y="{{true}}" class="scroll-view">
+    <view class="root">
+       <image src='../../images/down01.jpg' mode="widthFix"></image>
+       <button type="primary" bindtap='saveImage' data-img="down01.jpg"> 保存到相册 </button>
+       <image src='../../images/down02.jpg' mode="widthFix"></image>
+       <button type="primary" bindtap='saveImage' data-img="down02.jpg"> 保存到相册 </button>
+    </view>
+  </scroll-view>
+</view>

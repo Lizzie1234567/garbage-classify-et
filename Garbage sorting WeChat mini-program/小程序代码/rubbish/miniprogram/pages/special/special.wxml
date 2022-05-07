@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="{{true}}" class="scroll-view">
+    <view class="root">
+      <view class="item" wx:for="{{list}}" wx:key="{{item}}" bindtap="toDetailPage" data-name="{{item.name}}">
+        <text class="txt">{{item.name}}</text>
+        <image class="icon" src="../../images/jt.png" mode='aspectFill'></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>

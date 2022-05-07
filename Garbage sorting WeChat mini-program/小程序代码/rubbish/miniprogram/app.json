@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/examination/examination",
+    "pages/special/special",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/camera_result/camera_result",
+    "pages/tupu/tupu",
+    "pages/special_detail/special_detail",
+    "pages/robot/robot"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "垃圾分类",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "指南",
+        "iconPath": "/images/icon/index.png",
+        "selectedIconPath": "/images/icon/index_sel.png"
+      },
+      {
+        "pagePath": "pages/examination/examination",
+        "text": "测试",
+        "iconPath": "/images/icon/examination.png",
+        "selectedIconPath": "/images/icon/examination_sel.png"
+      },
+      {
+        "pagePath": "pages/special/special",
+        "text": "专题",
+        "iconPath": "/images/icon/special.png",
+        "selectedIconPath": "/images/icon/special_sel.png"
+      },
+      {
+        "pagePath": "pages/robot/robot",
+        "text": "机器人",
+        "iconPath": "/images/icon/robot.png",
+        "selectedIconPath": "/images/icon/robot_sel.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="{{true}}" class="scroll-view">
+    <view class="search_box"> 
+      <view class="search_inp" bindtap="toSearchPage">请输入垃圾名称</view>
+    </view>
+    
+    <view class="func-box">
+      <view class='item' bindtap="bindImageSerach">
+        <image src="../../images/creame.png" mode="widthFix" bindtap="toCameraPage"></image>
+        <text>拍照识别</text>
+      </view>
+      <view class='item' catch:touchstart="handleTouchStart" catch:touchend="handleTouchEnd">
+        <image src="../../images/voice.png" mode="widthFix"></image>
+        <text>语音识别</text>
+      </view>
+      <view class='item' open-type="share">
+        <image src="../../images/share.png" mode="widthFix"></image>
+        <text>分享朋友</text>
+        <button open-type='share' class='share_btn'></button>
+      </view>
+      <view class='item' bindtap="toTupuPage">
+        <image src="../../images/download.png" mode="widthFix"></image>
+        <text>图谱下载</text>
+      </view>
+    </view>
+    <view class="hot-pros">
+      <text class="title">热门搜索</text>
+      <view class="list">
+        <navigator url="../detail/detail?pid={{item._id}}" class="item" wx:for="{{hotProducts}}" wx:for-item="item">
+          <text>{{item.name}}</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="category-box-outer">
+      <view class="category-box">
+        <navigator url="../detail/detail?cid={{item.id}}" class="item" wx:for="{{categorys}}" wx:for-item="item">
+          <image  mode="scaleToFill" src="{{item.img}}"></image>
+        </navigator>
+      </view>
+    </view>
+    <view class="warning">
+      <icon type="warn" size="15" color='red'/>
+      <text>我们每个人都是地球上的一份子，保护地球村，从日常垃圾分类做起!</text>
+    </view>
+    
+  </scroll-view>
+</view>

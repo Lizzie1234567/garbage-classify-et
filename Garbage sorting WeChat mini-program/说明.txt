@@ -1,0 +1,4 @@
+在小程序管理系统添加域名: 
+   aip.baidubce.com
+   openapi.baidu.com
+   vop.baidu.com

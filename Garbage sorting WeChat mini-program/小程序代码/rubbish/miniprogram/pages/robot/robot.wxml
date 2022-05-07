@@ -1,0 +1,22 @@
+<view class="container">
+  <scroll-view scroll-y="true" class="list">
+    <view>
+      <view class="item" wx:for="{{list}}" wx:for-item="item">
+        <view class="left" wx:if="{{item.speaker=='left'}}">
+          <image class="avatar" src="../../images/robot.png"></image>
+          <view class="triangle"></view>
+          <text class="content">{{item.content}}</text>
+        </view>
+        <view class="right" wx:if="{{item.speaker=='right'}}">
+          <text class="content">{{item.content}}</text>
+          <view class="triangle"></view>
+          <image class="avatar" src="../../images/avatar.png"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="form">
+    <input class="inp" value="{{content}}" bindinput="bindKeyInput"/>
+    <button size="mini" bindtap="submit">提交</button>
+  </view>
+</view>

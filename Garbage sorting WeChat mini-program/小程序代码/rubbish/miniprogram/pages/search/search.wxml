@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="{{true}}" class="scroll-view">
+    <view class="root">
+      <view class="search_box"> 
+        <input class="search_inp" placeholder="请输入垃圾名称" bindinput="bindSearchInput" value="{{keyword}}"/>
+      </view>
+      <view class="list">
+        <navigator url="../detail/detail?pid={{item._id}}" class='item' wx:for="{{list}}" wx:for-item="item">
+          <view class='name'>{{item.name}}</view>
+          <view class='category'>{{item.categoryName}}</view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+</view>
